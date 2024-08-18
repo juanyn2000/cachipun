@@ -1,0 +1,90 @@
+body{
+    margin: auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color:white;
+}
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.container{
+   
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.elections{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 300px;
+}
+
+#piedra, #papel, #tijeras{
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 100%;
+    margin: 20px;
+}
+#piedra{
+    background-color: rgb(129, 241, 241);
+}
+#papel{
+    background-color: rgb(255, 251, 0);
+}
+#tijeras{
+    background-color: palevioletred;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+.elecciones{
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+}
+#elegido{
+    margin-top: 20px;
+    font-size: medium;
+    font-weight: bold;
+}
+#resultado{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.button{
+    margin-top: 30px;
+    width: 300px;
+    height: 40px;
+    background-color: chartreuse;
+    border-radius: 2em;
+    border:none;
+    outline: 2px solid black;
+    outline-offset: 3px;
+}
+.coontrolFinJuego{
+align-items: center;
+}
+#juegoTerminado{
+    text-align: center;
+}
+.conternedor{
+    display: flex;
+    justify-content: space-around;
+}
+.marcador{
+    width: 200px;
+   border: 2px solid white;
+   
+}
+button{
+    cursor: pointer;
+}
