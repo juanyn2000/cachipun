@@ -5,11 +5,26 @@ let puntosCPU = 0;
 let empates = 0;
 
 //pregunta por numero de rondas a jugar y valida
+
 function iniciarJuego() {
-  rondas = parseInt(prompt("¿Cuantas rondas quiere jugar?"));
-  while (isNaN(rondas) || rondas <= 0) {
-    rondas = parseInt(prompt("no es un numero valido"));
+  console.log("inicia el juego");
+  let rondasInput = document.getElementById("typeNumber");
+  console.log(typeNumber);
+  rondas = parseInt(rondasInput.value);
+
+  if (isNaN(rondas) || rondas <= 0) {
+    console.log("alerta");
+    alert(
+      "No es un número válido. Por favor, ingrese un número válido de rondas."
+    );
+    return;
   }
+  // Cierr el modal al iniciar el juego
+  let modal = bootstrap.Modal.getInstance(
+    document.getElementById("modalRondas")
+  );
+  modal.hide();
+
   contadorRondas = 0;
   puntosJugador = 0;
   puntosCPU = 0;
@@ -25,12 +40,12 @@ function iniciarJuego() {
   document.getElementById("piedra").disabled = false;
   document.getElementById("papel").disabled = false;
   document.getElementById("tijeras").disabled = false;
-//indica que debe escoger piedra, papel o tijeras
-document.getElementById("juegoTerminado").textContent = "Elija piedra, papel o tijeras";
+  //indica que debe escoger piedra, papel o tijeras
+  document.getElementById("juegoTerminado").textContent =
+    "Elija piedra, papel o tijeras";
 }
 
 function elegir(valor) {
-  
   if (contadorRondas < rondas) {
     let eleccion = valor;
     let h4 = document.getElementById("elegido");
