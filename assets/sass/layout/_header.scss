@@ -1,0 +1,10 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header__btn{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0px 40px 0px;
+}

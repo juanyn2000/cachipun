@@ -6,7 +6,7 @@ let empates = 0;
 
 //pregunta por numero de rondas a jugar y valida
 function iniciarJuego() {
-  rondas = (prompt("¿Cuantas rondas quiere jugar?"));
+  rondas = parseInt(prompt("¿Cuantas rondas quiere jugar?"));
   while (isNaN(rondas) || rondas <= 0) {
     rondas = parseInt(prompt("no es un numero valido"));
   }

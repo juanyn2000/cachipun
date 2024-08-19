@@ -1,0 +1,22 @@
+.elecciones {
+  display: flex;
+  justify-content: space-between;
+}
+#resultado {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.coontrolFinJuego {
+  align-items: center;
+  text-align: center;
+}
+#juegoTerminado {
+  text-align: center;
+}
+#eleCPU{
+    text-align: center;
+}
+#elegido{
+    text-align: center;
+}

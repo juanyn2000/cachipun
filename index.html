@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <div class="container">
     <div>
-      <h1 class="title">¡Juguemos Cachipún!</h1>
+      <h1 class="title ">¡Juguemos Cachipún!</h1>
       <div class="contenedor">
         <button id="piedra" onclick="elegir(0)">
           <img src="./assets/img/hand-fist-solid.svg" alt="" />
@@ -30,7 +31,7 @@
       <h4 id="eleCPU"></h4>
     </div>
     <div>
-      <button class="button" id="btnIniciar" onclick="iniciarJuego()">
+      <button class="button" id="btnIniciar" onclick="iniciarJuego">
         INICIAR JUEGO
       </button>
     </div>
@@ -40,7 +41,7 @@
       <h3>CPU: <span id="puntajeCPU"></span></h3>
       <h3>Empates: <span id="puntajeEmpates"></span></h3>
     </div>
-
+  </div>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
