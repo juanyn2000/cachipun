@@ -45,37 +45,41 @@ function iniciarJuego() {
     "Elija piedra, papel o tijeras";
 }
 
+
 function elegir(valor) {
   if (contadorRondas < rondas) {
     let eleccion = valor;
     let h4 = document.getElementById("elegido");
+    let iconoJugador;
     switch (eleccion) {
       case 0:
-        h4.textContent = "Tu elegiste: Piedra";
+        iconoJugador = '<i class="fa-solid fa-hand-fist iconPi"></i>'; // Piedra
         break;
       case 1:
-        h4.textContent = "Tu elegiste: Papel";
+        iconoJugador = '<i class="fa-solid fa-hand iconPa"></i>'; // Papel
         break;
       case 2:
-        h4.textContent = "Tu elegiste: Tijeras";
+        iconoJugador = '<i class="fa-solid fa-hand-peace iconTi"></i>'; // Tijeras
         break;
     }
+    h4.innerHTML = "Tu elegiste: " + iconoJugador;
 
-    //genera eleccion de la CPU aleatoriamente
+    // Genera la elección de la CPU aleatoriamente
     let eleccionCPU = Math.floor(Math.random() * 3);
     let h4CPU = document.getElementById("eleCPU");
-
+    let iconoCPU;
     switch (eleccionCPU) {
       case 0:
-        h4CPU.textContent = "CPU eligio: Piedra";
+        iconoCPU = '<i class="fa-solid fa-hand-fist iconPi"></i>'; // Piedra
         break;
       case 1:
-        h4CPU.textContent = "CPU eligio: Papel";
+        iconoCPU = '<i class="fa-solid fa-hand iconPa"></i>'; // Papel
         break;
       case 2:
-        h4CPU.textContent = "CPU eligio: Tijeras";
+        iconoCPU = '<i class="fa-solid fa-hand-peace iconTi"></i>'; // Tijeras
         break;
     }
+    h4CPU.innerHTML = "CPU eligió: " + iconoCPU;
 
     // Compara las elecciones y muestra el resultado
     let result = comparar(eleccion, eleccionCPU);
