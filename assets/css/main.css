@@ -11965,6 +11965,16 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.modal-content {
+  background-color: rgb(2, 2, 2);
+  border: 1px solid;
+}
+
+.buttonModalMarcador {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -12059,13 +12069,8 @@ i {
   text-align: center;
 }
 
-.marcador {
-  border: 2px dashed white;
-}
-
 .contenedor__marcador {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
 }/*# sourceMappingURL=main.css.map */

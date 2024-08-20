@@ -12,7 +12,7 @@ function iniciarJuego() {
   console.log(typeNumber);
   rondas = parseInt(rondasInput.value);
 
-  if (isNaN(rondas) || rondas <= 0) {
+  if (isNaN(rondas) || rondas <= 0 || rondas > 10) {
     console.log("alerta");
     alert(
       "No es un número válido. Por favor, ingrese un número válido de rondas."
@@ -119,9 +119,15 @@ function marcador(result) {
       empates++;
       break;
   }
-  document.getElementById("puntajeJugador").textContent = puntosJugador;
-  document.getElementById("puntajeCPU").textContent = puntosCPU;
-  document.getElementById("puntajeEmpates").textContent = empates;
+  document.getElementById("puntajeJugadorG").textContent = puntosJugador;
+  document.getElementById("puntajeCPUG").textContent = puntosCPU;
+  document.getElementById("puntajeEmpatesG").textContent = empates;
+  document.getElementById("puntajeJugadorP").textContent = puntosJugador;
+  document.getElementById("puntajeCPUP").textContent = puntosCPU;
+  document.getElementById("puntajeEmpatesP").textContent = empates;
+  document.getElementById("puntajeJugadorE").textContent = puntosJugador;
+  document.getElementById("puntajeCPUE").textContent = puntosCPU;
+  document.getElementById("puntajeEmpatesE").textContent = empates;
 }
 
 //ganador de las rondas
@@ -130,16 +136,22 @@ function ganador() {
     document.getElementById("juegoTerminado").textContent = "Juego terminado";
     document.getElementById("resultado").textContent =
       "¡Felicidades! ¡Has ganado!";
+      modal = new bootstrap.Modal(document.getElementById("modalGanaste"));
   } else if (puntosJugador < puntosCPU) {
     document.getElementById("juegoTerminado").textContent = "Juego terminado";
     document.getElementById("resultado").textContent = "¡Ouww, has perdido!";
+    modal = new bootstrap.Modal(document.getElementById("modalPerdiste"));
   } else {
     document.getElementById("juegoTerminado").textContent = "Juego terminado";
     document.getElementById("resultado").textContent = "Es un empate";
+    modal = new bootstrap.Modal(document.getElementById("modalEmpate"));
   }
+
   //borra las elecciones de la ronda
   document.getElementById("elegido").textContent = "";
   document.getElementById("eleCPU").textContent = "";
+
+ modal.show();
 }
 
 //deshabilitar botones
